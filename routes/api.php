@@ -21,4 +21,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/projects', [ProjectController::class, 'index']);
-Route::get('/types', [TypeController::class, 'index']);
+// Route::get('/types', [TypeController::class, 'index']);
