@@ -21,8 +21,9 @@ class ProjectController extends Controller {
 
     public function show(string $slug)
     {
-        $project = Project::all()->where('slug', $slug);
+        $project = Project::where('slug', $slug)->first();
 
+        // dd(Project::all(), Project::all()->where('slug', $slug), Project::where('slug', $slug)->toSql());
         return response()->json([
             'results' => $project,
             'success' => true
